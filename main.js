@@ -18,8 +18,33 @@ $(document).ready(() => {
         navText: navText,
         autoplayHoverPause: true,
     });
+
+    $("#showcase-slide").owlCarousel({
+        items: 6,
+        dots: false,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: true,
+        margin: 15,
+        responsive: {
+            320: {
+                items: 1,
+            },
+            500: {
+                items: 3,
+            },
+            1280: {
+                items: 4,
+            },
+            1600: {
+                items: 6,
+            },
+        },
+    });
 });
 
+// Handle Nav onscroll
 window.onscroll = function () {
     myFunction();
 };
